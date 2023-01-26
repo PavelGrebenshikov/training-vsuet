@@ -1,7 +1,7 @@
 import json
 
 
-def write_to_file():
+def write_to_file(matrix):
 
     matrix = [[1, 2, 3, 4],[5, 6, 7, 8],[9,10,11,12]]
 
@@ -14,7 +14,8 @@ def read_from_file():
 
     with open("GrebenshikovPavel_ZIT-2022_vivod.json", encoding="utf-8", mode="r+") as rf:
         data = json.load(rf)
-        print(data)
+    
+    return data
 
 
 # write_to_file()
