@@ -1,36 +1,6 @@
-import java.util.Arrays;
+package myMatrix;
 
 public class Matrix {
-
-    public static void main(String[] args) {
-        double[][] A = {
-                {1, 2, 25},
-                {4, 25, 6},
-                {25, 8, 9}
-        };
-        double[][] B = {
-                {9, 8, 7},
-                {6, 15, 4},
-                {19, 2, 1}
-        };
-
-        double[][] result = addMatrix(A, B);
-        System.out.println(Arrays.deepToString(result));
-        double[][] result2 = subtractMatrix(A, B);
-        System.out.println(Arrays.deepToString(result2));
-        double[][] result3 = transposeMatrix(A);
-        System.out.println(Arrays.deepToString(result3));
-        double[][] result4 = multiplyMatrix(A, B);
-        System.out.println(Arrays.deepToString(result4));
-        double result5 = determinant(A);
-        System.out.println(result5);
-        double[][] result6 = subtractMatrix(A, B);
-        System.out.println(Arrays.deepToString(result6));
-
-
-
-
-    }
 
     // сложение матриц
     public static double[][] addMatrix(double[][] A, double[][] B) {
