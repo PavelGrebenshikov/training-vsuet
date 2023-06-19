@@ -30,6 +30,7 @@ public class Main {
         System.out.println(result5);
         double[][] result6 = matrix.subtractMatrix(A, B);
         System.out.println(Arrays.deepToString(result6));
+        matrix.addMatrixToFile(A);
 
 
     }

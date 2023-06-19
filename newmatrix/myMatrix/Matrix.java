@@ -1,6 +1,29 @@
 package myMatrix;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Matrix {
+
+    public static void addMatrixToFile(double[][] matrix) {
+        File file = new File("matrix.txt");
+
+        try {
+            FileWriter writer = new FileWriter(file);
+
+            for (int i = 0; i < matrix.length; i++) {
+                for (int j = 0; j < matrix[0].length; j++) {
+                    writer.write(matrix[i][j] + " ");
+                }
+                writer.write(System.lineSeparator());
+            }
+            writer.close();
+            System.out.println("True");
+        } catch (IOException e) {
+            System.out.println("False");
+        }
+    }
 
     // сложение матриц
     public static double[][] addMatrix(double[][] A, double[][] B) {
