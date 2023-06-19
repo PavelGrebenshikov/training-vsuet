@@ -1,11 +1,30 @@
 package myMatrix;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.util.Arrays;
 
 public class Matrix {
 
+    public static void outputLastMatrix() {
+
+        try (FileReader fr = new FileReader("matrix.txt");
+             BufferedReader br = new BufferedReader(fr))
+        {
+            String line = br.readLine();
+
+            while (line != null) {
+                System.out.println(line);
+                line = br.readLine();
+            }
+
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    // запись матрицы в файл
     public static void addMatrixToFile(double[][] matrix) {
         File file = new File("matrix.txt");
 
