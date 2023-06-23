@@ -1,6 +1,8 @@
 import Classes.AdditionStringsNumbers;
 import Classes.NextGreaterNumber;
 import Classes.RangeFinder;
+import Classes.RomanToArabic;
+import Classes.ArabicToRomanYearConverter;
 
 import java.util.List;
 
@@ -21,6 +23,15 @@ public class Main {
         RangeFinder rangeFilter = new RangeFinder();
         List<String> ranges = rangeFilter.findRanges(numbers);
         System.out.println(ranges);
+
+        // Вывод 46 задачи
+        String roman = "MMXXIII";
+        RomanToArabic rtb = new RomanToArabic();
+        System.out.println(rtb.romanToArabic(roman));
+
+        // Вывод 45 задачи
+        ArabicToRomanYearConverter atryc = new ArabicToRomanYearConverter();
+        System.out.println(atryc.arabicToRomanYear(2023));
 
     }
 
